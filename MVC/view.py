@@ -7,14 +7,17 @@ View:
 
 from model import Person
 
+
 def show_all_view(persons):
-	print(f'In our db we have {len(persons)} users. Here they are:')
-	for person in persons:
-		print(person)
+    print(f'In our db we have {len(persons)} users. Here they are:')
+    for person in persons:
+        print(person)
+
 
 def start_view():
-	print ('MVC - the simplest example')
-	print ('Do you want to see everyone in my db?[y/N]')
+    print('MVC - the simplest example')
+    print('Do you want to see everyone in my db?[y/N]')
+
 
 def end_view():
-	print ('Goodbye!')
+    print('Goodbye!')

@@ -6,6 +6,7 @@ Model:
 
 import json
 
+<<<<<<< HEAD
 class Person(objects):
 	"""docstring for Person"""
 	def __init__(self, first_name=None, last_name=None):
@@ -28,3 +29,28 @@ class Person(objects):
 
 		return persons
 		
+=======
+
+class Person:
+    """docstring for Person"""
+
+    def __init__(self, first_name=None, last_name=None):
+        self.first_name = first_name
+        self.last_name = last_name
+
+    def __repr__(self):
+        return f'{self.first_name} {self.last_name}'
+
+    @classmethod
+    def get_all(self):
+        persons = []
+        with open('db.txt', 'r') as db:
+            json_list = json.loads(db.read())
+
+        for item in json_list:
+            item = json.loads(item)
+            person = Person(item['first_name'], item['last_name'])
+            persons.append(person)
+
+        return persons
+>>>>>>> b1945172333d5eb638288d7abaab9c37c27405a9

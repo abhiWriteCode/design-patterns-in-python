@@ -1,7 +1,7 @@
 import copy
 
 
-class Employees:
+class Employees(objects):
 	
 	def __init__(self, employees_list=[]):
 		self.employees_list = employees_list

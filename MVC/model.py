@@ -6,7 +6,7 @@ Model:
 
 import json
 
-class Person:
+class Person(objects):
 	"""docstring for Person"""
 	def __init__(self, first_name=None, last_name=None):
 		self.first_name = first_name
